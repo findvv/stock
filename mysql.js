@@ -70,7 +70,7 @@ function controlTable(sqlName, tableName) {
 }
 
 async function play() {
-    let sql = await createSql('stock');
+    var sql = await createSql('stock');
     await controlTable(sql,'huan');
 }
 
