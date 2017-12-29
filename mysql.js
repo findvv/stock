@@ -1,12 +1,5 @@
 let SMysql = require('sm-mysql');
-
-let db = {  
-  "host"     : "121.42.166.253",  
-  "user"     : "root",  
-  "password" : "ZZX$137623",  
-  "port"     : "3306"
-}
-
+let db = require('./data/database');
 
 function createSql(name) {
     return new Promise((resolve,reject)=>{
@@ -73,5 +66,4 @@ async function play() {
     var sql = await createSql('stock');
     await controlTable(sql,'huan');
 }
-
 play();
